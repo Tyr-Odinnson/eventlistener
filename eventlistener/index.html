@@ -2,18 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style\indexcss.css">
+    <link rel="stylesheet" type="text/css" href="style/indexcss.css">
+    <script src="style/index.js"></script>
     <title>EventListener</title>
   </head>
-  <body>
+  <body class="eventl">
+  <header>
     <div class="topnav">
-        <p1>EventListener</p1>
-        <a class="active" href="#music">Music</a>
-        <a href="#sports">Sports</a>
-        <a href="#theatre">Theatre</a>
-        <a href="#conventions">Conventions</a>
-        <a href="#other">Other</a>
+      <ul>
+        <a style="float:left" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+        <li class="sport"><a href="#">Sport</a></li>
+        <li class="music"><a href="#">Music</a></li>
+        <li class="conventions"><a href="#">Conventions</a></li>
+        <li class="theatre"><a href="#">Theatre</a></li>
+        <li class="other"><a href="#">Other</a></li>
+        <a class="dashboard" style="float:right" href="#"><img border="0" src="style/dashboard.png" width="50" height="50"></a></li>
+      </ul>
     </div>
+    <div class="titlebanner">
+      <div id="locationnav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">New Zealand</a>
+          <a href="#">Australia</a>
+          <a href="#">America</a>
+          <a href="#">Canada</a>
+          <a href="#">United Kingdom</a>
+      </div>
+      <span onclick="openNav()">open</span>
 
-  </body>
+      <h1>EventListener</h1>
+      <p>Bringing events to hosts and attendees</p>
+    </div>
+  </header>
+</body>
 </html>
