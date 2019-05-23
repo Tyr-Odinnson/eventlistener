@@ -5,7 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/signup.css">
 
-    <title>EventListener</title>
+    <title>EventListener - Sign Up</title>
+    <script
+    src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase with your code
+    var config = {
+    apiKey: "Your Key",
+    authDomain: "Your domain",
+    databaseURL: "Your URL",
+    projectId: "Your project ID",
+    storageBucket: "Your bucket storage",
+    messagingSenderId: "Your messaging sender id"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+        <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+          signInSuccessUrl: '<your-url-to-redirect-to-on-successful login>',signInOptions: [
+
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+      };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+      </script>
   </head>
   <body>
 <header>
@@ -41,11 +78,12 @@
     <p>By creating an account you agree to our <a href="terms.html" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="button" class="cancelbtn" href="index.html">Cancel</button>
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
+
 
 </body>
 </html>

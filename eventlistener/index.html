@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <base href="https://eventlistener-74576.firebaseapp.com/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/indexcss.css">
-
     <title>EventListener</title>
   </head>
   <body class="eventl">
@@ -12,7 +12,7 @@
     <div class="topnav">
       <ul>
         <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
-        <li class="sport" ><a href="#" class="hoverlink">Sport</a></li>
+        <li class="sport"><a href="#" class="hoverlink">Sport</a></li>
         <li class="music"><a href="#" class="hoverlink">Music</a></li>
         <li class="conventions"><a href="#" class="hoverlink">Conventions</a></li>
         <li class="theatre"><a href="#" class="hoverlink">Theatre</a></li>
@@ -30,6 +30,7 @@
             <button type="submit" class="btn">Login</button>
             <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
             <p1>New to EventListener? <a id="sign" href="signup.html">Sign Up!</a> </p1>
+            <div id="firebaseui-auth-container"></div>
           </form>
         </div>
       </ul>
@@ -43,7 +44,7 @@
           <a href="#">Canada</a>
           <a href="#">United Kingdom</a>
       </div>
-      <span  style="float:left;font-size:30px;cursor:pointer;margin-left:20px;margin-top:15px;"  onclick="openNav()">&#9776;Locations</span>
+      <span  style="float:left;font-size:30px;cursor:pointer;margin-left:20px;margin-top:25px;"  onclick="openNav()">&#9776;Locations</span>
       <h2>EventListener</h2>
       <p>Bringing events to hosts and attendees</p>
     </div>
