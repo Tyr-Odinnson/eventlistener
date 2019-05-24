@@ -32,9 +32,9 @@ body {
   transition: .3s background-color;
 }
 
-.topnav a.active {
-  background-color: #fff;
-  color: #444;
+.topnav li.active {
+  background-color: black;
+  color: black;
   cursor: default;
 }
 

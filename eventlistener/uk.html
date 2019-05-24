@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/locale.css">
+    <title>UK Events</title>
+  </head>
+  <body class="eventl">
+  <header>
+    <div class="topnav">
+      <ul>
+        <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+        <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
+        <li class="music"><a href="music.html" class="hoverlink">Music</a></li>
+        <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
+        <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
+        <li class="other"><a href="otherevents.html"  class="hoverlink">Other</a></li>
+        <button style="text-align:center; cursor:pointer;" class="open-button" onclick="openForm()">Login/Sign Up <img src="style/dashboard.png" width="50px" alt=""> </button>
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            <p1>New to EventListener? <a id="sign" href="signup.html">Sign Up!</a> </p1>
+            <div id="firebaseui-auth-container"></div>
+          </form>
+        </div>
+      </ul>
+    </div>
+    <div class="titlebanner">
+      <div id="locationnav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="nz.html">New Zealand</a>
+          <a href="aus.html">Australia</a>
+          <a href="usa.html">America</a>
+          <a href="canada.html">Canada</a>
+          <a href="uk.html">United Kingdom</a>
+      </div>
+      <span  style="float:left;font-size:30px;cursor:pointer;margin-left:20px;margin-top:25px;"  onclick="openNav()">&#9776;Locations</span>
+      <h2>Events in the United Kingdom</h2>
+      <img style src="style/ukflag.png" alt="" class="flag">
+    </div>
+
+  </header>
+  <script src="style/index.js"></script>
+  <div class="slide" id="slide1">
+          <h1>Rugby League:</h1>
+          <h2>All Blacks</h2>
+          <p> Next week Saturday live at Mt Smart Stadium</p>
+          <div class="tickets">
+               <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+              <figure>
+                  <img  src="blacks3.jpg" >
+              </figure>
+          </div>
+      </div>
+      <div class="slide" id="slide2">
+          <h1>Rugby League:</h1>
+          <h2>Vodafone Warriors</h2>
+          <p>This Sunday at Mt Smart Stadium</p>
+          <div class="tickets">
+               <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+              <figure>
+                  <img src="warriors2.jpg" />
+              </figure>
+          </div>
+      </div>
+      <div class="slide" id="slide3">
+           <h1>Pop:</h1>
+           <h2>The Weeknd</h2>
+           <p> Playing his hit album Starboy live for two nights at Spark Arena in Auckland.</p>
+           <div class="tickets">
+                <h3><a href="#"> Get Tickets </a></h3>
+           </div>
+           <div class="hover12">
+               <figure>
+                  <img src="theweeknd1.jpg" />
+               </figure>
+           </div>
+      </div>
+      <div class="slide" id="slide4">
+            <h1>Rap/Hip-Hop:</h1>
+            <h2>Post Malone</h2>
+            <p> Playing live for one night at Spark Arena in Auckland featuring special artists.</p>
+            <div class="tickets">
+                 <h3><a href="#"> Get Tickets </a></h3>
+            </div>
+            <div class="hover12">
+                 <figure>
+                      <img src="post.jpg"/>
+                 </figure>
+            </div>
+       </div>
+       <div class="slide" id="slide5">
+          <h1>Comedy:</h1>
+          <h2>Chris Rock</h2>
+          <p>17th September at Spark Arena.</p>
+          <div class="tickets">
+             <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+                 <figure>
+                      <img src="chris.jpg" />
+                 </figure>
+          </div>
+       </div>
+    <div class="slide" id="slide6">
+          <h1>Comedy:</h1>
+          <h2>Hannibal Buress</h2>
+          <p>Wed 5 2019 7pm @ Energy Events Centre Rotorua.</p>
+          <div class="tickets">
+             <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+                 <figure>
+                      <img src="hannibal.jpg" />
+                 </figure>
+          </div>
+       </div>
+</body>
+</html>
