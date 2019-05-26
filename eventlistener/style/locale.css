@@ -251,14 +251,15 @@ h2 {
 
 #slide4 {
   position: absolute;
-  top: 110%;
+  top: 115%;
   left: 5%;
   width: 200px;
   height: 100px;
+
 }
 #slide5 {
   position: absolute;
-  top: 110%;
+  top: 115%;
   left: 37%;
   width: 700px;
   height: 400px;
@@ -266,11 +267,11 @@ h2 {
 }
     #slide6 {
   position: absolute;
-  top: 110%;
+  top: 115%;
   left: 69%;
   width: 200px;
   height: 100px;
-
+  
 }
 .tickets {
   text-decoration: none;
