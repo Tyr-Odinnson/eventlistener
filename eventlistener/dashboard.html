@@ -2,25 +2,61 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!-- <base href="https://eventlistener-74576.firebaseapp.com/"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/dashboard.css">
+    <title>EventListener</title>
   </head>
   <body>
+    <header>
+      <div class="topnav">
+        <ul>
+          <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+          <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
+          <li class="music"><a href="music.html" class="hoverlink">Music</a></li>
+          <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
+          <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
+          <li class="other"><a href="otherevents.html"  class="hoverlink">Other</a></li>
+      </div>
+    </header>
+
     <button id="signOut">Sign Out</button>
     <h1 id="userlog"></h1>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+
     <script type="text/javascript">
-    firebase.auth().onAuthStateChanged(function(user)
-    {
-    if(user)
-    {
-    document.getElementById('userlog').innerHTML= '<h1> Congrats '+
-    user.displayName'</h1>';
-    }
-    else
-    {
-    console.log(" No user Signed in!");
-    }
-    //TODO signOut code
-    });
+
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBM4WS124zk8ei3ZNxSFae1vaORDZnsgOU",
+    authDomain: "eventlistener-74576.firebaseapp.com",
+    databaseURL: "https://eventlistener-74576.firebaseio.com",
+    projectId: "eventlistener-74576",
+    // storageBucket: "eventlistener-74576.appspot.com",
+    // messagingSenderId: "791784425767",
+    appId: "1:791784425767:web:869e7dc912fab2be"
+    };
+    firebase.initializeApp(config);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+
+  
+    // ******* LOGOUT **************
+    const logout = document.querySelector('#signOut');
+     logout.addEventListener('click', (e) => {
+         e.preventDefault();
+         auth.signOut().then(() => {
+           console.log('user signed out');
+           alert ("You have successfully logged out!!");
+           window.location.href = 'index.html';
+         });
+     });
+     // ******* LOGIN & LOGOUT Display **************
+
+
 </script>
   </body>
 </html>
