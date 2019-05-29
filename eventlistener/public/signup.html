@@ -6,43 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style/signup.css">
 
     <title>EventListener - Sign Up</title>
-    <script
-    src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script>
-    // Initialize Firebase with your code
-    var config = {
-    apiKey: "Your Key",
-    authDomain: "Your domain",
-    databaseURL: "Your URL",
-    projectId: "Your project ID",
-    storageBucket: "Your bucket storage",
-    messagingSenderId: "Your messaging sender id"
-    };
-    firebase.initializeApp(config);
-    </script>
 
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-        <script type="text/javascript">
-        // FirebaseUI config.
-        var uiConfig = {
-          signInSuccessUrl: '<your-url-to-redirect-to-on-successful login>',signInOptions: [
-
-        // Leave the lines as is for the providers you want to offer your users.
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        // firebase.auth.PhoneAuthProvider.PROVIDER_ID
-        ],
-      };
-
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-      </script>
   </head>
   <body>
 <header>
@@ -56,20 +20,20 @@
       <li class="other"><a href="#" class="hoverlink">Other</a></li>
     </div>
 </header>
-<form action="/action_page.php" style="border:1px solid #ccc">
+<form id="signup-form" style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input id="signup-email" type="text" placeholder="Enter Email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input id="signup-password1" type="password" placeholder="Enter Password" name="psw" required>
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input id="signup-password2" type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -80,10 +44,30 @@
     <div class="clearfix">
       <button type="button" onclick="window.location.href = 'index.html';" class="cancelbtn">Cancel</button>
       <button type="submit" class="signupbtn">Sign Up</button>
+
     </div>
   </div>
 </form>
 
 
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+     <script>
+       // Initialize Firebase
+       var config = {
+         apiKey: "AIzaSyBM4WS124zk8ei3ZNxSFae1vaORDZnsgOU",
+  authDomain: "eventlistener-74576.firebaseapp.com",
+  databaseURL: "https://eventlistener-74576.firebaseio.com",
+  projectId: "eventlistener-74576",
+  // storageBucket: "eventlistener-74576.appspot.com",
+  // messagingSenderId: "791784425767",
+  appId: "1:791784425767:web:869e7dc912fab2be"
+       };
+       firebase.initializeApp(config);
+         const auth = firebase.auth();
+         const db = firebase.firestore();
+     </script>
+     <script src="style/auth_signup.js"></script>
 </body>
 </html>

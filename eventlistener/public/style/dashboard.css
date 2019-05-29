@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+
+.topnav ul {
+  list-style: none;
+  background-color: #585858;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 70px;
+}
+.topnav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+.topnav  a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+.hoverlink:hover {
+  background-color: #00cc99;
+  transition: .3s background-color;
+}
+
+.topnav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  .topnav li {
+    width: 130px;
+    border-bottom: none;
+    height: 60px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+}
+  .topnav li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }

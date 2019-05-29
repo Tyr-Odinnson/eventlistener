@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/events.css">
+    <title>Misc. Events</title>
+  </head>
+  <body class="eventl">
+  <header>
+    <div class="topnav" id="nav-loggedout">
+      <ul>
+        <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+        <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
+        <li class="music"><a href="music.html" class="hoverlink" >Music</a></li>
+        <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
+        <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
+        <li class="active"><a href="comedy.html">Comedy</a></li>
+        <button style="text-align:center; cursor:pointer;" class="open-button" onclick="openForm()">Login/Sign Up <img src="style/dashboard.png" width="50px" alt=""> </button>
+        <div class="form-popup" id="myForm">
+          <form id="signinForm" class="form-container">
+            <h1>Login</h1>
+            <label for="email"><b>Email</b></label>
+            <input id="login-email" type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input id="login-password" type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            <p1>New to EventListener? <a id="sign" href="signup.html">Sign Up!</a> </p1>
+            <div id="firebaseui-auth-container"></div>
+          </form>
+        </div>
+      </ul>
+    </div>
+    <div class="topnav" id="nav-loggedin">
+      <ul>
+        <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+        <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
+        <li class="music"><a href="music.html" class="hoverlink" >Music</a></li>
+        <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
+        <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
+        <li class="active"><a href="comedy.html">Comedy</a></li>
+        <a style="text-align:center; cursor:pointer;" class="dashboard" href="dashboard.html">My Account<img src="style/dashboard.png" width="50px" alt=""> </a>
+      </ul>
+    </div>
+    <div class="titlebanner">
+      <div id="locationnav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="nz.html">New Zealand</a>
+          <a href="aus.html">Australia</a>
+          <a href="usa.html">America</a>
+          <a href="can.html">Canada</a>
+      </div>
+      <span  style="float:left;font-size:30px;cursor:pointer;margin-left:20px;margin-top:25px;"  onclick="openNav()">&#9776;Locations</span>
+      <h2>EventListener</h2>
+      <p>Bringing domestic and international events to you!</p>
+    </div>
+  </header>
+  <script src="style/index.js"></script>
+  <div class="slide" id="slide1">
+          <h2>Major Event!</h2>
+          <h4>Chris Rock</h4>
+          <p>Chris Rock graces New Zealand in a hilarious spectacle!</p>
+          <div class="tickets">
+               <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+              <figure>
+                  <img style="display: block; margin-left: auto; margin-right: auto; cursor:pointer;"  src="style/chris2.jpg" >
+              </figure>
+          </div>
+      </div>
+      <div class="slide" id="slide2">
+          <h2 style="color:black;" >Billy Connolly</h2>
+          <h4>Billy Connolly, a legend of Comedy</h4>
+          <p>December 2nd - 4th at Classic Comedy & Bar</p>
+          <div class="tickets">
+               <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+              <figure>
+                  <img style="cursor:pointer;" src="style/billy.jpg" />
+              </figure>
+          </div>
+      </div>
+      <div class="slide" id="slide3">
+           <h1>Hannibal Buress</h1>
+           <h2 style="color:black;" >Hannibal Buress makes his debut NZ trip</h2>
+           <p>Available September 20th - 21st in Basement Theatre</p>
+           <div class="tickets">
+                <h3><a href="#"> Get Tickets </a></h3>
+           </div>
+           <div class="hover12">
+               <figure>
+                  <img style="cursor:pointer;" src="style/hannibalburess.jpg" />
+               </figure>
+           </div>
+      </div>
+      <div class="slide" id="slide4">
+           <h1>Bill Bailey</h1>
+           <h2 style="color:black;" >One of the main stars of Black Books, Bill Baily comes to Auckland.</h2>
+           <p>This Saturday in Auckland Basement Theatre.</p>
+           <div class="tickets">
+                <h3><a href="#"> Get Tickets </a></h3>
+           </div>
+           <div class="hover12">
+               <figure>
+                  <img style="cursor:pointer;" src="style/billbailey.jpg" />
+               </figure>
+           </div>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+           <script>
+             // Initialize Firebase
+             var config = {
+               apiKey: "AIzaSyBM4WS124zk8ei3ZNxSFae1vaORDZnsgOU",
+        authDomain: "eventlistener-74576.firebaseapp.com",
+        databaseURL: "https://eventlistener-74576.firebaseio.com",
+        projectId: "eventlistener-74576",
+        // storageBucket: "eventlistener-74576.appspot.com",
+        // messagingSenderId: "791784425767",
+        appId: "1:791784425767:web:869e7dc912fab2be"
+             };
+             firebase.initializeApp(config);
+               const auth = firebase.auth();
+               const db = firebase.firestore();
+
+
+               //Cheking User status
+               auth.onAuthStateChanged(user => {
+                if (user) {
+                  // console.log('user logged in: ', user);
+                  const login = document.querySelector('#nav-loggedin');
+                  const logout = document.querySelector('#nav-loggedout');
+                  logout.style.display ="none";
+                } else {
+                  // console.log('user logged out');
+                  const login = document.querySelector('#nav-loggedin');
+                  const logout = document.querySelector('#nav-loggedout');
+                  login.style.display="none";
+                }
+               });
+
+           </script>
+           <script src="style/signin.js"></script>
+  </body>
+</html>

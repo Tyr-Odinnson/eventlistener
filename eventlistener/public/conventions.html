@@ -8,23 +8,23 @@
   </head>
   <body class="eventl">
   <header>
-    <div class="topnav">
+    <div class="topnav" id="nav-loggedout">
       <ul>
         <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
         <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
-        <li class="music"><a href="music.html">Music</a></li>
+        <li class="music"><a href="music.html" class="hoverlink" >Music</a></li>
         <li class="active"><a href="conventions.html">Conventions</a></li>
         <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
-        <li class="other"><a href="otherevents.html" class="hoverlink">Other</a></li>
+        <li class="comedy"><a href="comedy.html"  class="hoverlink">Comedy</a></li>
         <button style="text-align:center; cursor:pointer;" class="open-button" onclick="openForm()">Login/Sign Up <img src="style/dashboard.png" width="50px" alt=""> </button>
         <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form id="signinForm" class="form-container">
             <h1>Login</h1>
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input id="login-email" type="text" placeholder="Enter Email" name="email" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="login-password" type="password" placeholder="Enter Password" name="psw" required>
 
             <button type="submit" class="btn">Login</button>
             <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
@@ -34,6 +34,17 @@
         </div>
       </ul>
     </div>
+    <div class="topnav" id="nav-loggedin">
+      <ul>
+        <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+        <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
+        <li class="music"><a href="music.html" class="hoverlink" >Music</a></li>
+        <li class="active"><a href="conventions.html">Conventions</a></li>
+        <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
+        <li class="comedy"><a href="comedy.html"  class="hoverlink">Comedy</a></li>
+        <a style="text-align:center; cursor:pointer;" class="dashboard" href="dashboard.html">My Account<img src="style/dashboard.png" width="50px" alt=""> </a>
+      </ul>
+    </div>
     <div class="titlebanner">
       <div id="locationnav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -41,7 +52,6 @@
           <a href="aus.html">Australia</a>
           <a href="usa.html">America</a>
           <a href="can.html">Canada</a>
-          <a href="uk.html">United Kingdom</a>
       </div>
       <span  style="float:left;font-size:30px;cursor:pointer;margin-left:20px;margin-top:25px;"  onclick="openNav()">&#9776;Locations</span>
       <h2>EventListener</h2>
@@ -51,55 +61,91 @@
   <script src="style/index.js"></script>
   <div class="slide" id="slide1">
           <h2>Major Event!</h2>
-          <h4>All Blacks vs Australia</h4>
-          <p> Next week Saturday live at Mt Smart Stadium</p>
+          <h4>Armageddon Expo - NZ Comicon</h4>
+          <p>ASB Showgrounds, Auckland - October 25-28th 2019</p>
           <div class="tickets">
                <h3><a href="#"> Get Tickets </a></h3>
           </div>
           <div class="hover12">
               <figure>
-                  <img style="display: block; margin-left: auto; margin-right: auto;"  src="style/allblacks.jpg" >
+                  <img style="display: block; margin-left: auto; margin-right: auto; cursor:pointer;"  src="style/armageddon.jpg" >
               </figure>
           </div>
       </div>
       <div class="slide" id="slide2">
-          <h2 style="color:black;" >Rugby League</h2>
-          <h4>Vodafone Warriors vs Canberra Raiders</h4>
-          <p>This Sunday at Mt Smart Stadium</p>
+          <h2 style="color:black;" >Tattoo Expo</h2>
+          <h4>New Plymouth tattoo convention</h4>
+          <p>24th - 25th November at TSB Stadium</p>
           <div class="tickets">
                <h3><a href="#"> Get Tickets </a></h3>
           </div>
           <div class="hover12">
               <figure>
-                  <img src="style/warriors2.jpg" />
+                  <img style="cursor:pointer;" src="style/tattoo.jpg" />
               </figure>
           </div>
       </div>
       <div class="slide" id="slide3">
-           <h1>Fight For Life!</h1>
-           <h2 style="color:black;" >Junior Fa vs Julius Long</h2>
-           <p>Fight for Life is back with two top heavyweight boxers! Hosted at Chao Shan General Association, Onehunga - Auckland! </p>
+           <h1>NZ Classic Car Convention</h1>
+           <h2 style="color:black;" >A range of classic cars of all eras.</h2>
+           <p>Whether it is a vintage from the early 1900s, or an 80's classic, this even has them all! <br> Lloyd Elsmore Park, Auckland, Auckland, 4 March 2020. </p>
            <div class="tickets">
                 <h3><a href="#"> Get Tickets </a></h3>
            </div>
            <div class="hover12">
                <figure>
-                  <img src="style/junior fa.jpg" />
+                  <img style="cursor:pointer;" src="style/car.jpg" />
                </figure>
            </div>
       </div>
       <div class="slide" id="slide4">
-           <h1>International Basketball</h1>
-           <h2 style="color:black;" >Tall Blacks vs Great Britain!</h2>
-           <p>This Sunday in Wellington.</p>
+           <h1>2019 NZ Art Show Gala Evening</h1>
+           <h2 style="color:black;" >A Gala evening and Expo for New Zealand's finest artists!</h2>
+           <p>TSB Arena, Queens Wharf, Wellington - Thursday 30 May 2019 6:00pm – 9:30pm</p>
            <div class="tickets">
                 <h3><a href="#"> Get Tickets </a></h3>
            </div>
            <div class="hover12">
                <figure>
-                  <img src="style/tallblacks.jpg" />
+                  <img style="cursor:pointer;" src="style/statue.jpg" />
                </figure>
            </div>
       </div>
+      <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+           <script>
+             // Initialize Firebase
+             var config = {
+               apiKey: "AIzaSyBM4WS124zk8ei3ZNxSFae1vaORDZnsgOU",
+        authDomain: "eventlistener-74576.firebaseapp.com",
+        databaseURL: "https://eventlistener-74576.firebaseio.com",
+        projectId: "eventlistener-74576",
+        // storageBucket: "eventlistener-74576.appspot.com",
+        // messagingSenderId: "791784425767",
+        appId: "1:791784425767:web:869e7dc912fab2be"
+             };
+             firebase.initializeApp(config);
+               const auth = firebase.auth();
+               const db = firebase.firestore();
+
+
+               //Cheking User status
+               auth.onAuthStateChanged(user => {
+                if (user) {
+                  // console.log('user logged in: ', user);
+                  const login = document.querySelector('#nav-loggedin');
+                  const logout = document.querySelector('#nav-loggedout');
+                  logout.style.display ="none";
+                } else {
+                  // console.log('user logged out');
+                  const login = document.querySelector('#nav-loggedin');
+                  const logout = document.querySelector('#nav-loggedout');
+                  login.style.display="none";
+                }
+               });
+
+           </script>
+           <script src="style/signin.js"></script>
   </body>
 </html>

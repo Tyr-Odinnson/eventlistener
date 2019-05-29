@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/locale.css">
-    <title>Australian Events</title>
+    <title>Aussie Events</title>
   </head>
   <body class="eventl">
   <header>
-    <div class="topnav">
+    <div class="topnav" id="nav-loggedout">
       <ul>
         <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
         <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
-        <li class="music"><a href="music.html" class="hoverlink">Music</a></li>
+        <li class="music"><a href="music.html" class="hoverlink" >Music</a></li>
         <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
-        <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
-        <li class="other"><a href="otherevents.html"  class="hoverlink">Other</a></li>
+        <li class="theatre"><a href="theatre.html" class="hoverlink" >Theatre</a></li>
+        <li class="comedy"><a href="comedy.html"  class="hoverlink">Comedy</a></li>
         <button style="text-align:center; cursor:pointer;" class="open-button" onclick="openForm()">Login/Sign Up <img src="style/dashboard.png" width="50px" alt=""> </button>
         <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form id="signinForm" class="form-container">
             <h1>Login</h1>
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input id="login-email" type="text" placeholder="Enter Email" name="email" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="login-password" type="password" placeholder="Enter Password" name="psw" required>
 
             <button type="submit" class="btn">Login</button>
             <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
@@ -34,6 +34,17 @@
         </div>
       </ul>
     </div>
+    <div class="topnav" id="nav-loggedin">
+      <ul>
+        <a style="float:left; margin-left:10px; margin-top:10px;" class="logo" href="index.html"><img border="0" src="style/EventListener Logo.png" width="50" height="50"></a>
+        <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
+        <li class="music"><a href="music.html" class="hoverlink" >Music</a></li>
+        <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
+        <li class="theatre"><a href="theatre.html" class="hoverlink" >Theatre</a></li>
+        <li class="comedy"><a href="comedy.html"  class="hoverlink">Comedy</a></li>
+        <a style="text-align:center; cursor:pointer;" class="dashboard" href="dashboard.html">My Account<img src="style/dashboard.png" width="50px" alt=""> </a>
+      </ul>
+    </div>
     <div class="titlebanner">
       <div id="locationnav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -41,126 +52,126 @@
           <a href="aus.html">Australia</a>
           <a href="usa.html">America</a>
           <a href="canada.html">Canada</a>
-          <a href="uk.html">United Kingdom</a>
       </div>
       <span  style="float:left;font-size:30px;cursor:pointer;margin-left:20px;margin-top:25px;"  onclick="openNav()">&#9776;Locations</span>
       <h2>Events in Australia</h2>
       <img style src="style/ausflag.png" alt="" class="flag">
     </div>
-    <div class="slide" id="slide1">
-            <h1>Rugby League:</h1>
-            <h2>All Blacks</h2>
-            <p> Next week Saturday live at Mt Smart Stadium</p>
-            <div class="tickets">
-                 <h3><a href="#"> Get Tickets </a></h3>
-            </div>
-            <div class="hover12">
-                <figure>
-                    <img  src="blacks3.jpg" >
-                </figure>
-            </div>
-        </div>
-        <div class="slide" id="slide2">
-            <h1>Rugby League:</h1>
-            <h2>Vodafone Warriors</h2>
-            <p>This Sunday at Mt Smart Stadium</p>
-            <div class="tickets">
-                 <h3><a href="#"> Get Tickets </a></h3>
-            </div>
-            <div class="hover12">
-                <figure>
-                    <img src="warriors2.jpg" />
-                </figure>
-            </div>
-        </div>
-        <div class="slide" id="slide3">
-             <h1>Pop:</h1>
-             <h2>The Weeknd</h2>
-             <p> Playing his hit album Starboy live for two nights at Spark Arena in Auckland.</p>
-             <div class="tickets">
-                  <h3><a href="#"> Get Tickets </a></h3>
-             </div>
-             <div class="hover12">
-                 <figure>
-                    <img src="theweeknd1.jpg" />
-                 </figure>
-             </div>
-        </div>
-        <div class="slide" id="slide4">
-              <h1>Rap/Hip-Hop:</h1>
-              <h2>Post Malone</h2>
-              <p> Playing live for one night at Spark Arena in Auckland featuring special artists.</p>
-              <div class="tickets">
-                   <h3><a href="#"> Get Tickets </a></h3>
-              </div>
-              <div class="hover12">
-                   <figure>
-                        <img src="post.jpg"/>
-                   </figure>
-              </div>
-         </div>
-         <div class="slide" id="slide5">
-            <h1>Comedy:</h1>
-            <h2>Chris Rock</h2>
-            <p>17th September at Spark Arena.</p>
-            <div class="tickets">
-               <h3><a href="#"> Get Tickets </a></h3>
-            </div>
-            <div class="hover12">
-                   <figure>
-                        <img src="chris.jpg" />
-                   </figure>
-            </div>
-         </div>
-      <div class="slide" id="slide6">
-            <h1>Comedy:</h1>
-            <h2>Hannibal Buress</h2>
-            <p>Wed 5 2019 7pm @ Energy Events Centre Rotorua.</p>
-            <div class="tickets">
-               <h3><a href="#"> Get Tickets </a></h3>
-            </div>
-            <div class="hover12">
-                   <figure>
-                        <img src="hannibal.jpg" />
-                   </figure>
-            </div>
-         </div>
   </header>
-  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
-       <script>
-         // Initialize Firebase
-         var config = {
-           apiKey: "AIzaSyBM4WS124zk8ei3ZNxSFae1vaORDZnsgOU",
-    authDomain: "eventlistener-74576.firebaseapp.com",
-    databaseURL: "https://eventlistener-74576.firebaseio.com",
-    projectId: "eventlistener-74576",
-    // storageBucket: "eventlistener-74576.appspot.com",
-    // messagingSenderId: "791784425767",
-    appId: "1:791784425767:web:869e7dc912fab2be"
-         };
-         firebase.initializeApp(config);
-           const auth = firebase.auth();
-           const db = firebase.firestore();
+  <script src="style/index.js"></script>
+  <div class="slide" id="slide1">
+          <h1>MotoGP</h1>
+          <h2>Australian Motorcycle Grand Prix</h2>
+          <p> Oct 25th - Phillip Island Grand Prix Circuit - Phillip Island</p>
+          <div class="tickets">
+               <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+              <figure>
+                  <img  src="style/motogp.jpg" >
+              </figure>
+          </div>
+      </div>
+      <div class="slide" id="slide2">
+          <h1>Snow Patrol</h1>
+          <h2>Alternative Rock Superstars</h2>
+          <p>Aug 04 - Perth Concert Hall - Perth</p>
+          <div class="tickets">
+               <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+              <figure>
+                  <img src="style/snowpatrol.jpg" />
+              </figure>
+          </div>
+      </div>
+      <div class="slide" id="slide3">
+           <h1>ZIRK Circus</h1>
+           <h2>July 03 -The Showring, Entertainment Quarter - Moore Park</h2>
+           <p>ZIRK! The Big Top Circus from Russia & the World!</p>
+           <div class="tickets">
+                <h3><a href="#"> Get Tickets </a></h3>
+           </div>
+           <div class="hover12">
+               <figure>
+                  <img src="style/zirk.jpg" />
+               </figure>
+           </div>
+      </div>
+      <div class="slide" id="slide4">
+            <h1>Chemical Brothers</h1>
+            <h2>Oct 31 - EDM Music, classic legends!</h2>
+            <p>Playing live for two nights at Riverstage Brisbane</p>
+            <div class="tickets">
+                 <h3><a href="#"> Get Tickets </a></h3>
+            </div>
+            <div class="hover12">
+                 <figure>
+                      <img src="style/chemicalbrothers.jpg"/>
+                 </figure>
+            </div>
+       </div>
+       <div class="slide" id="slide5">
+          <h1>Opera: Madama Butterfly</h1>
+          <h2>Jun 28th - Sydney Opera House - Joan Sutherland Theatre</h2>
+          <p>Performing for one night at Sydney Opera House</p>
+          <div class="tickets">
+             <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+                 <figure>
+                      <img src="style/madama.jpg" />
+                 </figure>
+          </div>
+       </div>
+    <div class="slide" id="slide6">
+          <h1>Chicago: The Musical</h1>
+          <h2>Aug 20 - Capitol Theatre, Sydney - Haymarket</h2>
+          <p>This event is one night only!</p>
+          <div class="tickets">
+             <h3><a href="#"> Get Tickets </a></h3>
+          </div>
+          <div class="hover12">
+                 <figure>
+                      <img src="style/chicago.jpg" />
+                 </figure>
+          </div>
+       </div>
+       <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+            <script>
+              // Initialize Firebase
+              var config = {
+                apiKey: "AIzaSyBM4WS124zk8ei3ZNxSFae1vaORDZnsgOU",
+         authDomain: "eventlistener-74576.firebaseapp.com",
+         databaseURL: "https://eventlistener-74576.firebaseio.com",
+         projectId: "eventlistener-74576",
+         // storageBucket: "eventlistener-74576.appspot.com",
+         // messagingSenderId: "791784425767",
+         appId: "1:791784425767:web:869e7dc912fab2be"
+              };
+              firebase.initializeApp(config);
+                const auth = firebase.auth();
+                const db = firebase.firestore();
 
 
-           //Cheking User status
-           auth.onAuthStateChanged(user => {
-            if (user) {
-              // console.log('user logged in: ', user);
-              const login = document.querySelector('#nav-loggedin');
-              const logout = document.querySelector('#nav-loggedout');
-              logout.style.display ="none";
-            } else {
-              // console.log('user logged out');
-              const login = document.querySelector('#nav-loggedin');
-              const logout = document.querySelector('#nav-loggedout');
-              login.style.display="none";
-            }
-           });
+                //Cheking User status
+                auth.onAuthStateChanged(user => {
+                 if (user) {
+                   // console.log('user logged in: ', user);
+                   const login = document.querySelector('#nav-loggedin');
+                   const logout = document.querySelector('#nav-loggedout');
+                   logout.style.display ="none";
+                 } else {
+                   // console.log('user logged out');
+                   const login = document.querySelector('#nav-loggedin');
+                   const logout = document.querySelector('#nav-loggedout');
+                   login.style.display="none";
+                 }
+                });
 
-       </script>
-       <script src="style/signin.js"></script>
+            </script>
+            <script src="style/signin.js"></script>
 </body>
 </html>
