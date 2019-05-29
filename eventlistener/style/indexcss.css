@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ccc;
+  height: 1950px;
 }
 
 .topnav ul {
@@ -181,7 +182,6 @@ body {
 h2 {
   color: white;
   padding-right: 120px;
-  padding-top: 15px;
 }
 #sign {
   color: blue;
@@ -204,7 +204,7 @@ p {
 
 }
  .hover12 figure {
-	background: #1abc9c;
+   background: #ccc;
 }
 .hover12 figure img {
 	opacity: 1;
@@ -223,7 +223,7 @@ p {
   position: absolute;
   width: 1000px;
   height: 500px;
-  top: 20%;
+  top: 25%;
   left: 5%;
   border-radius: 2px;
 
@@ -231,7 +231,7 @@ p {
 
 #slide2 {
   position:absolute;
-  top: 20%;
+  top: 25%;
   left: 37%;
   width: 200px;
   height: 100px;
@@ -240,7 +240,7 @@ p {
 
 #slide3 {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 69%;
   width: 200px;
   height: 100px;
@@ -249,26 +249,27 @@ p {
 
 #slide4 {
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 5%;
   width: 200px;
   height: 100px;
+  padding-bottom: 40px;
 }
 #slide5 {
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 37%;
   width: 700px;
   height: 400px;
-
+padding-bottom: 40px;
 }
-    #slide6 {
+  #slide6 {
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 69%;
   width: 200px;
   height: 100px;
-
+padding-bottom: 40px;
 }
 .tickets {
   text-decoration: none;
@@ -303,11 +304,11 @@ p {
   transform: scaleX(1);
 }
     .slide h1 {
-        width: 200px;
-        height: 80px;
+        width: 250px;
+        height: 60px;
     }
 .slide h2 {
-          width: 200px;
+          width: 250px;
         height: 30px;
         color: blue;
     }
