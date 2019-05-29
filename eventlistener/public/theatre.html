@@ -2,10 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- <base href="https://eventlistener-74576.firebaseapp.com/"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style/indexcss.css">
-    <title>EventListener</title>
+    <link rel="stylesheet" type="text/css" href="style/events.css">
+    <title>Theatre Events</title>
   </head>
   <body class="eventl">
   <header>
@@ -15,8 +14,8 @@
         <li class="sport"><a href="sport.html" class="hoverlink">Sport</a></li>
         <li class="music"><a href="music.html" class="hoverlink">Music</a></li>
         <li class="conventions"><a href="conventions.html" class="hoverlink">Conventions</a></li>
-        <li class="theatre"><a href="theatre.html" class="hoverlink">Theatre</a></li>
-        <li class="other"><a href="otherevents.html"  class="hoverlink">Other</a></li>
+        <li class="active"><a href="theatre.html">Theatre</a></li>
+        <li class="other"><a href="otherevents.html" class="hoverlink">Other</a></li>
         <button style="text-align:center; cursor:pointer;" class="open-button" onclick="openForm()">Login/Sign Up <img src="style/dashboard.png" width="50px" alt=""> </button>
         <div class="form-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
@@ -48,25 +47,24 @@
       <h2>EventListener</h2>
       <p>Bringing domestic and international events to you!</p>
     </div>
-
   </header>
   <script src="style/index.js"></script>
   <div class="slide" id="slide1">
-          <h1>Rugby League:</h1>
-          <h2>All Blacks</h2>
+          <h2>Major Event!</h2>
+          <h4>All Blacks vs Australia</h4>
           <p> Next week Saturday live at Mt Smart Stadium</p>
           <div class="tickets">
                <h3><a href="#"> Get Tickets </a></h3>
           </div>
           <div class="hover12">
               <figure>
-                  <img  src="style/blacks3.jpg" >
+                  <img style="display: block; margin-left: auto; margin-right: auto;"  src="style/allblacks.jpg" >
               </figure>
           </div>
       </div>
       <div class="slide" id="slide2">
-          <h1>Rugby League:</h1>
-          <h2>Vodafone Warriors</h2>
+          <h2 style="color:black;" >Rugby League</h2>
+          <h4>Vodafone Warriors vs Canberra Raiders</h4>
           <p>This Sunday at Mt Smart Stadium</p>
           <div class="tickets">
                <h3><a href="#"> Get Tickets </a></h3>
@@ -78,56 +76,30 @@
           </div>
       </div>
       <div class="slide" id="slide3">
-           <h1>Pop:</h1>
-           <h2>The Weeknd</h2>
-           <p> Playing his hit album Starboy live for two nights at Spark Arena in Auckland.</p>
+           <h1>Fight For Life!</h1>
+           <h2 style="color:black;" >Junior Fa vs Julius Long</h2>
+           <p>Fight for Life is back with two top heavyweight boxers! Hosted at Chao Shan General Association, Onehunga - Auckland! </p>
            <div class="tickets">
                 <h3><a href="#"> Get Tickets </a></h3>
            </div>
            <div class="hover12">
                <figure>
-                  <img src="style/theweeknd1.jpg" />
+                  <img src="style/junior fa.jpg" />
                </figure>
            </div>
       </div>
       <div class="slide" id="slide4">
-            <h1>Rap/Hip-Hop:</h1>
-            <h2>Post Malone</h2>
-            <p> Playing live for one night at Spark Arena in Auckland featuring special artists.</p>
-            <div class="tickets">
-                 <h3><a href="#"> Get Tickets </a></h3>
-            </div>
-            <div class="hover12">
-                 <figure>
-                      <img src="style/post.jpg"/>
-                 </figure>
-            </div>
-       </div>
-       <div class="slide" id="slide5">
-          <h1>Comedy:</h1>
-          <h2>Chris Rock</h2>
-          <p>17th September at Spark Arena.</p>
-          <div class="tickets">
-             <h3><a href="#"> Get Tickets </a></h3>
-          </div>
-          <div class="hover12">
-                 <figure>
-                      <img src="style/chris.jpg" />
-                 </figure>
-          </div>
-       </div>
-    <div class="slide" id="slide6">
-          <h1>Comedy:</h1>
-          <h2>Hannibal Buress</h2>
-          <p>Wed 5 2019 7pm @ Energy Events Centre Rotorua.</p>
-          <div class="tickets">
-             <h3><a href="#"> Get Tickets </a></h3>
-          </div>
-          <div class="hover12">
-                 <figure>
-                      <img src="style/hannibal.jpg" />
-                 </figure>
-          </div>
-       </div>
-</body>
+           <h1>International Basketball</h1>
+           <h2 style="color:black;" >Tall Blacks vs Great Britain!</h2>
+           <p>This Sunday in Wellington.</p>
+           <div class="tickets">
+                <h3><a href="#"> Get Tickets </a></h3>
+           </div>
+           <div class="hover12">
+               <figure>
+                  <img src="style/tallblacks.jpg" />
+               </figure>
+           </div>
+      </div>
+  </body>
 </html>
